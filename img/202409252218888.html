@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.8.5/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Vue基础","children":[{"content":"Vue是什么？","children":[],"payload":{"lines":"2,3"}},{"content":"Vue初识","children":[{"content":"\n<p data-lines=\"8,9\">Vue工作时必须要创建一个Vue的实例，并且传入一个配置对象。</p>","children":[],"payload":{"lines":"8,10"}},{"content":"\n<p data-lines=\"10,11\">root容器里的代码是符合html的语法但是新添加了一些Vue语法，在这些地方Vue会自动进行解析。</p>","children":[],"payload":{"lines":"10,12"}},{"content":"\n<p data-lines=\"12,13\">root容器里的代码称为Vue模版。</p>","children":[],"payload":{"lines":"12,14"}},{"content":"\n<p data-lines=\"14,15\">Vue实例和容器是一一对应的。</p>","children":[],"payload":{"lines":"14,16"}},{"content":"\n<p data-lines=\"16,17\">在实际开发中只有一个Vue，配合组件使用。</p>","children":[],"payload":{"lines":"16,18"}},{"content":"\n<p data-lines=\"18,19\">在vue里的插值<code>{{ }}</code> 内部只要写js表达式就能正常解析。</p>","children":[],"payload":{"lines":"18,20"}},{"content":"\n<p data-lines=\"20,21\">一旦data里的数据进行了变化，所有用到的位置会自动更新，这也是vue的重要特点，数据响应式。</p>","children":[],"payload":{"lines":"20,23"}}],"payload":{"lines":"6,7"}},{"content":"Vue语法基础","children":[{"content":"vue的模版语法","children":[{"content":"\n<p data-lines=\"27,28\">插值语法</p>\n<p data-lines=\"29,30\">直接在双大括号<code>{{ }}</code>里写时就是插值语法，无需多言。主要是解析标签体内的内容。只是基础的读取实例的所有data。</p>","children":[],"payload":{"lines":"27,31"}},{"content":"\n<p data-lines=\"31,32\">指令语法</p>","children":[],"payload":{"lines":"31,33"}}],"payload":{"lines":"25,26"}},{"content":"el和data的写法","children":[],"payload":{"lines":"39,40"}}],"payload":{"lines":"23,24"}},{"content":"MVVM模型","children":[{"content":"<img src=\"https://img.smyhvae.com/20180420_2150.png\" alt=\"img\">","children":[]}],"payload":{"lines":"63,64"}},{"content":"数据代理","children":[{"content":"<img src=\"https://jsd.onmicrosoft.cn/gh/Qchengju/MyPic@img/img/202409252046192.png\" alt=\"属性提示符\">","children":[]}],"payload":{"lines":"71,72"}},{"content":"事件绑定","children":[],"payload":{"lines":"87,88"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>
